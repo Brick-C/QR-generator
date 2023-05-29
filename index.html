@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons  -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+ integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+ crossorigin="anonymous" />
+
+</head>
+<body>
+    
+    <form action="">
+        <h2 class="heading">QR-Code Generator</h2>
+        <input type="url" id="website" name="website" placeholder="https://www.example.com" required>
+
+        <div id="qrcode-container">
+            <div id="qrcode" class="qrcode"></div>
+        
+            <button type="button" class="generateBtn" onclick="generateQRcode()">Generate QR Code</button>
+        </div>
+    </form>
+
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+    <script>
+        function generateQRcode() {
+            var qrcode = new QRCode(document.getElementById("qrcode"), {
+                width: 300,
+                height: 300,
+            });
+
+            var website = document.getElementById("website").value;
+
+            qrcode.makeCode(website);
+        }
+     </script>   
+</body>
+</html>
