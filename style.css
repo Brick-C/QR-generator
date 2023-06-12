@@ -5,15 +5,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #877957;
+    background-color: #0d1435;
     color: white;
     height: 600px;
     
 }
 
 form{
-    height: 30rem;
-    width: 24rem;
+    height: 32rem;
+    width: 26rem;
     display: flex;
     align-items: center;
     background-color: white;
@@ -38,7 +38,7 @@ form{
      height: 30px;
     outline: none;
     border: none;
-    background: gainsboro;
+    background: rgb(183, 183, 183);
     padding: 5 10px;
     margin-bottom: 20px; 
 }
@@ -55,7 +55,7 @@ input {
     width: 85%;
     height: 33px;
     padding: 10 20px;
-    background: rgb(47, 180, 176);
+    background: rgb(29, 142, 139);
     color: rgb(255, 255, 255);
     border-radius: 7px;
     border: none;
